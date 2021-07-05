@@ -98,6 +98,9 @@ jobs:
             laravel-version: '^7.29.0'
           - php-version: '8.0'
             laravel-version: '^8.12.0'
+          - php-version: '8.1'
+            laravel-version: '^8.12.0'
+            composer-flags: '--ignore-platform-req php'
 
     steps:
     - uses: actions/checkout@v2
