@@ -16,7 +16,10 @@ composer require 'laravel/framework:dev-master as 8' --update-with-dependencies 
 composer config repositories.bugsnag-laravel '{ "type": "path", "url": "../../../", "options": { "symlink": false } }'
 composer require bugsnag/bugsnag-laravel '*' --no-update
 
-composer update --no-dev
+composer remove facade/ignition nunomaduro/collision --dev --no-update
+composer remove laravel/tinker fruitcake/laravel-cors fideloper/proxy --no-update
+
+composer update --no-dev --ignore-platform-req php
 
 printf "\nCreated Laravel project using these versions:\n"
 
